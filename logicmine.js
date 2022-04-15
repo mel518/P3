@@ -1,3 +1,5 @@
+// 500 wines in US only for map
+
 function init() {
     d3.json("http://127.0.0.1:5000").then(data => {
         console.log("read samples");
@@ -8,24 +10,25 @@ function init() {
         var varietyList = [];
         for(var i = 0; i<mydata.length; i++) {
             mydata[i].variety
-            varietyList.push(mydata[i].variety)
-    }
+            varietyList.push(mydata[i].variety)}
         console.log(varietyList);
-        // list of countries
-        var countryList = [];
-        for(var i = 0; i<mydata.length; i++) {
-            mydata[i].country
-            countryList.push(mydata[i].country)
-    }
-        console.log(countryList);
-
+      
         // list of provinces
         var provinceList = [];
         for(var i = 0; i<mydata.length; i++) {
             mydata[i].province
-            provinceList.push(mydata[i].province)
-    }
-        console.log(provinceList);
+            provinceList.push(mydata[i].province)}
+        // list of regions
+        var regionList = [];
+        for(var i = 0; i<mydata.length; i++) {
+            mydata[i].region_1
+            regionList.push(mydata[i].region_1)}
+        // for coordinates
+
+        var countryProv = regionList.map(function(e, i,) {
+            return [e, provinceList[i]];
+          });
+          console.log(countryProv);
 
         // list of price
 
