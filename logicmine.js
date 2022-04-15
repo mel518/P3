@@ -3,6 +3,7 @@ function init() {
         console.log("read samples");
         var mydata = JSON.parse(data)
         console.log(mydata)
+        // 
         // list of varieties
         var varietyList = [];
         for(var i = 0; i<mydata.length; i++) {
@@ -11,39 +12,28 @@ function init() {
     }
         console.log(varietyList);
         // list of countries
+        var countryList = [];
+        for(var i = 0; i<mydata.length; i++) {
+            mydata[i].country
+            countryList.push(mydata[i].country)
+    }
+        console.log(countryList);
 
         // list of provinces
+        var provinceList = [];
+        for(var i = 0; i<mydata.length; i++) {
+            mydata[i].province
+            provinceList.push(mydata[i].province)
+    }
+        console.log(provinceList);
 
         // list of price
 
         // list of points
     });
 }
-// filter, when data.filter(x => x.price == null) = blah
 
 init();
-
-// using select to pull a select amount of elements from the db
-// function init() {
-//     d3.json("http://127.0.0.1:5000/select/US").then(data => {
-//         console.log("read samples");
-//         console.log(data)
-//     });
-// }
-
-
-function countries(data) {
-    for (let i = 0; i<data.length; i++) {
-    console.log(data.country);
-    }}
-
-
-
-  
-
-
-
-
 // Creating our initial map object:
 // We set the longitude, latitude, and starting zoom level.
 // This gets inserted into the div with an id of "map".
