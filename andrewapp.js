@@ -90,10 +90,7 @@ function init() {
 }
 
 // New Option for Drop Down, re-load all info
-function optionChanged(value) {
-  console.log(value);
-  buildMetadata(value);
-}
+
 
 // Initialize the code
 init();

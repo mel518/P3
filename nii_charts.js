@@ -126,7 +126,8 @@ function scatterpoints(sample){
 
 // New Option for Drop Down, re-load all info
 function optionChanged(value) {
-  
+  console.log(value);
+  buildMetadata(value);
   
   scatterpoints(value)
 }
