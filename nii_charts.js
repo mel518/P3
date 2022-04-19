@@ -128,8 +128,8 @@ function scatterpoints(sample){
 function optionChanged(value) {
   console.log(value);
   buildMetadata(value);
-  
-  scatterpoints(value)
+  scatterpoints(value);
+  second_chart(value);
 }
 
 // Initialize the code

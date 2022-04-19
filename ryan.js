@@ -91,8 +91,3 @@ function init() {
 // Initialize the code
 init();
 
-// New Option for Drop Down, re-load all info
-function optionChanged(value) {
-    console.log(value);
-    second_chart(value)
-}
