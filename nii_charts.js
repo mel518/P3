@@ -117,7 +117,15 @@ function scatterpoints(sample){
         },
         }
       ];
-      Plotly.newPlot('bar', data);
+      let barLayout= {
+        title: 'Histogram of Wine Rating',
+        margin: {t:0},
+        hovermode: "closest",
+        xaxis: {title: 'Wine Ratings'},
+        yaxis: {title:'# of wines'},
+        margin: {t:30}
+      };
+      Plotly.newPlot('bar', data,barLayout);
 
 
   });
