@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, jsonify
 from flask_pymongo import PyMongo
 import json
 from bson.json_util import dumps
+from matplotlib import projections
 from zmq import ROUTER
 from bson import json_util
 from flask_cors import CORS
@@ -11,14 +12,13 @@ app = Flask(__name__)
 CORS(app)
 
 # Use PyMongo to establish Mongo connection
-mongo = PyMongo(app, uri="mongodb://localhost:27017/project3")
+mongo = PyMongo(app, uri="mongodb://localhost:27017/project3-group4")
 
 
 @app.route("/")
 def homepage():
     # want country, province, price, and points to be NOT null
-    data = mongo.db.wines.find({"country" : "US", "price" : {"$ne" : None},"points" : {"$ne" : None},"region_1" : {"$ne" : None}, "province" : {"$ne" : None} } 
-    ).limit(1000) #this is the array produced on our local host server, can filter instead of select on js page
+    data = mongo.db.wines.find({},{'_id': 0}).limit(1000)
     list_cur = list(data)
     #print(type(list_cur))
     #json_data = jsonify(list_cur)
