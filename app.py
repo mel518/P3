@@ -17,8 +17,8 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/project3")
 @app.route("/")
 def homepage():
     # want country, province, price, and points to be NOT null
-    data = mongo.db.wines.find({"country" : "US", "price" : {"$ne" : None},"points" : {"$ne" : None},"region_1" : {"$ne" : None}, "province" : {"$ne" : None} } 
-    ).limit(1000) #this is the array produced on our local host server, can filter instead of select on js page
+    data = mongo.db.wines.find({}).limit(5000)
+     #this is the array produced on our local host server, can filter instead of select on js page
     list_cur = list(data)
     #print(type(list_cur))
     #json_data = jsonify(list_cur)
