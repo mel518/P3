@@ -16,27 +16,27 @@ function second_chart(sample) {
        
         //display the top option
         if (length > 2){
-            let displayinfo = d3.select('#sample-metadata');
-            displayinfo.html('');
-            Object.entries(top_results[0]).forEach(k =>{
-                console.log(k)
-                displayinfo.append('panel-body').text(k[0]+':' + k[1]).append('br');
-            });
-        //display the second top option
-            let displayinfo2 = d3.select('#sample-metadata2');
-            displayinfo2.html('');
-            Object.entries(top_results[1]).forEach(k2 =>{
-                console.log(k2)
-                displayinfo2.append('panel-body2').text(k2[0]+':' + k2[1]).append('br');
-            });
-        }else{
             let displayinfo = d3.select('#sample-metadata2');
             displayinfo.html('');
             Object.entries(top_results[0]).forEach(k =>{
                 console.log(k)
                 displayinfo.append('panel-body').text(k[0]+':' + k[1]).append('br');
             });
-            let displayinfo2 = d3.select('#sample-metadata2');
+        //display the second top option
+            let displayinfo2 = d3.select('#sample-metadata3');
+            displayinfo2.html('');
+            Object.entries(top_results[1]).forEach(k2 =>{
+                console.log(k2)
+                displayinfo2.append('panel-body').text(k2[0]+':' + k2[1]).append('br');
+            });
+        }else{
+            let displayinfo = d3.select('#sample-metadata3');
+            displayinfo.html('');
+            Object.entries(top_results[0]).forEach(k =>{
+                console.log(k)
+                displayinfo.append('panel-body').text(k[0]+':' + k[1]).append('br');
+            });
+            let displayinfo2 = d3.select('#sample-metadata3');
             displayinfo2.html('');        
         };
     });
@@ -90,8 +90,6 @@ function init() {
 
 // Initialize the code
 init();
-
-
 
 // New Option for Drop Down, re-load all info
 function optionChanged(value) {
