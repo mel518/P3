@@ -33,8 +33,11 @@ function buildMetadata(sample) {
       // Hint: Inside the loop, you will need to use d3 to append new
       // Tags for each key-value in the metadata.
       Object.entries(uniqueCountry).forEach(([key, value]) => {
-        PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+        PANEL.append("h6").text(`${value}`);
       });
+      // Object.entries(uniqueCountry).forEach(([key, value]) => {
+      //   PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+      // });
     });
   }
 
