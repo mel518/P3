@@ -11,7 +11,7 @@ function init() {
         for(var i = 0; i<mydata.length; i++) {
             mydata[i].variety
             varietyList.push(mydata[i].variety)}
-        console.log(varietyList);
+        //console.log(varietyList);
       
         // list of provinces
         var provinceList = [];
@@ -37,6 +37,8 @@ function init() {
 }
 
 init();
+
+
 // Creating our initial map object:
 // We set the longitude, latitude, and starting zoom level.
 // This gets inserted into the div with an id of "map".

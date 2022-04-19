@@ -26,6 +26,13 @@ def homepage():
     json_data = jsonify(json_util.dumps(list_cur))
     return json_data
 
+@app.route("/coords")
+def coords():
+    data = mongo.db.coordinates2.find()
+    list_cur = list(data)
+    json_data = jsonify(json_util.dumps(list_cur))
+    return json_data
+
 # @app.route("/")
 # def homepage():
 #     data = mongo.db.wines.find() #this is the array produced on our local host server, can filter instead of select on js page
