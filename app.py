@@ -9,20 +9,12 @@ from zmq import ROUTER
 from bson import json_util
 from flask_cors import CORS
 
-
-
-
 # Create an instance of Flask
 app = Flask(__name__)
 CORS(app)
 
-
-
-
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/project3")
-
-
 
 @app.route("/")
 def homepage():
@@ -35,9 +27,6 @@ def homepage():
     # print(type(json))
     json_data = jsonify(json_util.dumps(list_cur))
     return json_data
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
