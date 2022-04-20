@@ -1,3 +1,6 @@
+
+
+
 from flask import Flask, render_template, redirect, jsonify
 from flask_pymongo import PyMongo
 import json
@@ -6,12 +9,19 @@ from zmq import ROUTER
 from bson import json_util
 from flask_cors import CORS
 
+
+
+
 # Create an instance of Flask
 app = Flask(__name__)
 CORS(app)
 
+
+
+
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/project3")
+
 
 
 @app.route("/")
@@ -26,7 +36,32 @@ def homepage():
     json_data = jsonify(json_util.dumps(list_cur))
     return json_data
 
-# @app.route("/")
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # @app.route("/")
 # def homepage():
 #     data = mongo.db.wines.find() #this is the array produced on our local host server, can filter instead of select on js page
 #     list_cur = list(data)
@@ -43,8 +78,3 @@ def homepage():
 #     return json_data
 
 #templates or d3.json to call server
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
