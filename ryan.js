@@ -18,11 +18,13 @@ function second_chart(sample) {
 
         //display the top option
         if (length > 1) {
+        if (length > 1){
             let displayinfo = d3.select('#sample-metadata2');
             displayinfo.html('');
             Object.entries(top_results[0]).forEach(k => {
                 console.log(k)
                 displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
+                displayinfo.append('panel-body').text(k[0].toUpperCase()+': ' + k[1]).append('br');
             });
             //display the second top option
             let displayinfo2 = d3.select('#sample-metadata3');
@@ -32,11 +34,15 @@ function second_chart(sample) {
                 displayinfo2.append('panel-body').text(k2[0] + ':' + k2[1]).append('br');
             });
         } else {
+                displayinfo2.append('panel-body').text(k2[0].toUpperCase()+': ' + k2[1]).append('br');
+            });
+        }else{
             let displayinfo = d3.select('#sample-metadata2');
             displayinfo.html('');
             Object.entries(top_results[0]).forEach(k => {
                 console.log(k)
                 displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
+                displayinfo.append('panel-body').text(k[0].toUpperCase()+': ' + k[1]).append('br');
             });
             let displayinfo2 = d3.select('#sample-metadata3');
             displayinfo2.html('');
@@ -120,8 +126,3 @@ function init() {
 // Initialize the code
 init();
 
-// New Option for Drop Down, re-load all info
-function optionChanged(value) {
-    console.log(value);
-    second_chart(value)
-}

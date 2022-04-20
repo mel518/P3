@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wine a Little, Laugh a Lot</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  
 </head>
 
 <body>
@@ -19,21 +21,19 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-12">
         <div class="well">
           <h5>Choose Your Poison!</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="col-md-6-4">
+        <div class="col-md-4">
           <div class="well">
-<<<<<<< HEAD
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title">Demographic Info</h3>
               </div>
               <div id="sample-metadata" class="panel-body"></div>
             </div>
-=======
           <div class="panel panel-primary">
             <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
@@ -43,10 +43,15 @@
           </div>
           <div id="sample-metadata" class="panel-body"></div>
           </div>
->>>>>>> 4c38bc6c5e207efd83e045a61548c24ab1a99506
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Wine Variety by Country</h3>
+              </div>
+              <div id="sample-metadata" class="panel-body"></div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6-4">
+        <div class="col-md-4">
           <div class="well">
             <div class="panel panel-primary">
               <div class="panel-heading">
@@ -61,6 +66,7 @@
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title">Demographic Info</h3>
+                <h3 class="panel-title">Top Wine</h3>
               </div>
               <div id="sample-metadata2" class="panel-body"></div>
             </div>
@@ -71,6 +77,11 @@
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <h3 class="panel-title">Demographic Info2</h3>
+        <div class="col-md-4">
+          <div class="well">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">2nd Best Wine</h3>
               </div>
               <div id="sample-metadata3" class="panel-body"></div>
             </div>
@@ -80,6 +91,10 @@
           <div id="bar"></div>
         </div>
         <div class="col-md-5">
+        <div class="col-md-12">
+          <div id="bar"></div>
+        </div>
+        <div class="col-md-12">
           <div id="gauge"></div>
         </div>
       </div>
@@ -90,25 +105,29 @@
       </div>
     </div>
 
-<<<<<<< HEAD
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="ryan.js"></script>
     <!-- <script src="./static/js/bonus.js"></script> -->
 
-=======
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <script src="ryan.js"></script>
 
-  <script src="nii_charts.js"></script>
-  <!-- <script src="logic1.js"></script> -->
-  <script src="andrewapp.js"></script>
+    <script src="andrewapp.js"></script>
+    <script src="ryan.js"></script>
+    <script src="nii_charts.js"></script>
+
+    <!-- <script src="nii_charts.js"></script> -->
+    <!-- <script src="logic1.js"></script> -->
+
+
+    <!-- <script src="./static/js/bonus.js"></script> -->
 
   <!-- <script src="./static/js/bonus.js"></script> -->
   
->>>>>>> 4c38bc6c5e207efd83e045a61548c24ab1a99506
 </body>
 
 </html>
