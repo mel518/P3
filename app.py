@@ -12,13 +12,19 @@ app = Flask(__name__)
 CORS(app)
 
 # Use PyMongo to establish Mongo connection
-mongo = PyMongo(app, uri="mongodb://localhost:27017/project3-group4")
+mongo = PyMongo(app, uri="mongodb://localhost:27017/project3")
 
 
 @app.route("/")
 def homepage():
     # want country, province, price, and points to be NOT null
+<<<<<<< HEAD
     data = mongo.db.wines.find({},{'_id': 0}).limit(5000)
+=======
+    data = mongo.db.wines.find({},{'_id': 0}).limit(1000)
+    data = mongo.db.wines.find({}).limit(5000)
+     #this is the array produced on our local host server, can filter instead of select on js page
+>>>>>>> 4c38bc6c5e207efd83e045a61548c24ab1a99506
     list_cur = list(data)
     #print(type(list_cur))
     #json_data = jsonify(list_cur)
