@@ -18,7 +18,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/project3-group4")
 @app.route("/")
 def homepage():
     # want country, province, price, and points to be NOT null
-    data = mongo.db.wines.find({},{'_id': 0}).limit(1000)
+    data = mongo.db.wines.find({},{'_id': 0}).limit(5000)
     list_cur = list(data)
     #print(type(list_cur))
     #json_data = jsonify(list_cur)
