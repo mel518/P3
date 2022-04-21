@@ -17,65 +17,86 @@ function second_chart(sample) {
 
         //display the top option
         if (length > 1) {
-            if (length > 1) {
-                let displayinfo = d3.select('#sample-metadata2');
-                displayinfo.html('');
-                Object.entries(top_results[0]).forEach(k => {
-                    console.log(k)
-                    // displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
-                    displayinfo.append('panel-body').text(k[0].toUpperCase() + ': ' + k[1]).append('br');
-                });
-                //display the second top option
-                let displayinfo2 = d3.select('#sample-metadata3');
-                displayinfo2.html('');
-                Object.entries(top_results[1]).forEach(k2 => {
-                    console.log(k2)
-                    displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ':' + k2[1]).append('br');
-                });
-            } else {
-                displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ': ' + k2[1]).append('br');
-            }
-        } else {
             let displayinfo = d3.select('#sample-metadata2');
             displayinfo.html('');
             Object.entries(top_results[0]).forEach(k => {
                 console.log(k)
-                // displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
                 displayinfo.append('panel-body').text(k[0].toUpperCase() + ': ' + k[1]).append('br');
             });
+            //display the second top option
             let displayinfo2 = d3.select('#sample-metadata3');
             displayinfo2.html('');
-        };
-        //Display the top 10 options
-        let title = data.filter(meta => meta.variety === sample);
-        console.log(title)
-        var top_ten = []
-        for (var i = 0; i < title.length; i++) {
-            title[i].title
-            top_ten.push(title[i].title);
+            Object.entries(top_results[1]).forEach(k2 => {
+                console.log(k2)
+                displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ':' + k2[1]).append('br');
+            });
+        } else {
+            displayinfo.html('');
+            Object.entries(top_results[0]).forEach(k => {
+                console.log(k)
+                displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ': ' + k2[1]).append('br');
+            });
         }
-        console.log(top_ten);
-        number = [1,2,3,4,5,6,7,8,9,10]
-        let top_ten2 = top_ten.slice(0, 10).reverse();
-        let displayinfo3 = d3.select('#sample-metadata4');
-        displayinfo3.html('')
-        console.log(top_ten2)
-        Object.entries(top_ten2).forEach(([key, value]) => {
-            displayinfo3.append("panel-body").text(number[key] + `. `+ `${value}`).append('br');
-            
-            // let results2 = data.filter(varty => varty.variety === sample);
-            // console.log(results2)
-            // //get the top 3 results
-            // let top_results2 = results2.title.slice(0, 10).reverse();
-            // console.log(top_results2)
-            // // let length = top_results.length
-            // // console.log(length)
-            // let displayinfo = d3.select('#sample-metadata4');
-            // displayinfo.html('');
-            // Object.entries(top_results2).forEach(([key, value]) => {
-            //     displayinfo3.append("panel-body").text(`${value}`);
-        });
-        console.log(top_ten2)
+            // if (length > 1) {
+            //     if (length > 1) {
+            //         let displayinfo = d3.select('#sample-metadata2');
+            //         displayinfo.html('');
+            //         Object.entries(top_results[0]).forEach(k => {
+            //             console.log(k)
+            //             // displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
+            //             displayinfo.append('panel-body').text(k[0].toUpperCase() + ': ' + k[1]).append('br');
+            //         });
+            //         //display the second top option
+            //         let displayinfo2 = d3.select('#sample-metadata3');
+            //         displayinfo2.html('');
+            //         Object.entries(top_results[1]).forEach(k2 => {
+            //             console.log(k2)
+            //             displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ':' + k2[1]).append('br');
+            //         });
+            //     } else {
+            //         displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ': ' + k2[1]).append('br');
+            //     }
+            // } else {
+            //     let displayinfo = d3.select('#sample-metadata2');
+            //     displayinfo.html('');
+            //     Object.entries(top_results[0]).forEach(k => {
+            //         console.log(k)
+            //         // displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
+            //         displayinfo.append('panel-body').text(k[0].toUpperCase() + ': ' + k[1]).append('br');
+            //     });
+            //     let displayinfo2 = d3.select('#sample-metadata3');
+            //     displayinfo2.html('');
+            // };
+            //Display the top 10 options
+            let title = data.filter(meta => meta.variety === sample);
+            console.log(title)
+            var top_ten = []
+            for (var i = 0; i < title.length; i++) {
+                title[i].title
+                top_ten.push(title[i].title);
+            }
+            console.log(top_ten);
+            number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            let top_ten2 = top_ten.slice(0, 10).reverse();
+            let displayinfo3 = d3.select('#sample-metadata4');
+            displayinfo3.html('')
+            console.log(top_ten2)
+            Object.entries(top_ten2).forEach(([key, value]) => {
+                displayinfo3.append("panel-body").text(number[key] + `. ` + `${value}`).append('br');
+
+                // let results2 = data.filter(varty => varty.variety === sample);
+                // console.log(results2)
+                // //get the top 3 results
+                // let top_results2 = results2.title.slice(0, 10).reverse();
+                // console.log(top_results2)
+                // // let length = top_results.length
+                // // console.log(length)
+                // let displayinfo = d3.select('#sample-metadata4');
+                // displayinfo.html('');
+                // Object.entries(top_results2).forEach(([key, value]) => {
+                //     displayinfo3.append("panel-body").text(`${value}`);
+            });
+            console.log(top_ten2)
     });
 }
 
