@@ -2,14 +2,13 @@
 function buildMetadata(sample) {
     
     // Pull samples.json then call it (data)
-    d3.json("http://127.0.0.1:5000").then(data => {
+    d3.json(`http://127.0.0.1:5000/select/${sample}`).then(data => {
       console.log("read samples");
-      var data = JSON.parse(data)
-      
+    
       
       // Filter the data for the object with the desired sample number
       // Go to metadata / filter the following, if id == sample
-      var resultArray = data.filter(x => x.variety == sample);
+      var resultArray = data
     // console.log(resultArray[1].country)
     var resultCountry = []
       for(var i = 0; i<resultArray.length; i++) {
