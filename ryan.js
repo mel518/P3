@@ -18,31 +18,31 @@ function second_chart(sample) {
 
         //display the top option
         if (length > 1) {
-        if (length > 1){
-            let displayinfo = d3.select('#sample-metadata2');
-            displayinfo.html('');
-            Object.entries(top_results[0]).forEach(k => {
-                console.log(k)
-                displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
-                displayinfo.append('panel-body').text(k[0].toUpperCase()+': ' + k[1]).append('br');
-            });
-            //display the second top option
-            let displayinfo2 = d3.select('#sample-metadata3');
-            displayinfo2.html('');
-            Object.entries(top_results[1]).forEach(k2 => {
-                console.log(k2)
-                displayinfo2.append('panel-body').text(k2[0] + ':' + k2[1]).append('br');
-            });
+            if (length > 1) {
+                let displayinfo = d3.select('#sample-metadata2');
+                displayinfo.html('');
+                Object.entries(top_results[0]).forEach(k => {
+                    console.log(k)
+                    displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
+                    displayinfo.append('panel-body').text(k[0].toUpperCase() + ': ' + k[1]).append('br');
+                });
+                //display the second top option
+                let displayinfo2 = d3.select('#sample-metadata3');
+                displayinfo2.html('');
+                Object.entries(top_results[1]).forEach(k2 => {
+                    console.log(k2)
+                    displayinfo2.append('panel-body').text(k2[0] + ':' + k2[1]).append('br');
+                });
+            } else {
+                displayinfo2.append('panel-body').text(k2[0].toUpperCase() + ': ' + k2[1]).append('br');
+            }
         } else {
-                displayinfo2.append('panel-body').text(k2[0].toUpperCase()+': ' + k2[1]).append('br');
-            });
-        }else{
             let displayinfo = d3.select('#sample-metadata2');
             displayinfo.html('');
             Object.entries(top_results[0]).forEach(k => {
                 console.log(k)
                 displayinfo.append('panel-body').text(k[0] + ':' + k[1]).append('br');
-                displayinfo.append('panel-body').text(k[0].toUpperCase()+': ' + k[1]).append('br');
+                displayinfo.append('panel-body').text(k[0].toUpperCase() + ': ' + k[1]).append('br');
             });
             let displayinfo2 = d3.select('#sample-metadata3');
             displayinfo2.html('');
@@ -57,22 +57,22 @@ function second_chart(sample) {
         }
         console.log(top_ten);
 
-        let top_ten2 = top_ten.slice(0,10).reverse();
+        let top_ten2 = top_ten.slice(0, 10).reverse();
         let displayinfo3 = d3.select('#sample-metadata4');
         displayinfo3.html('')
         Object.entries(top_ten2).forEach(([key, value]) => {
             displayinfo3.append("panel-body").text(`${value}`).append('br');
-        // let results2 = data.filter(varty => varty.variety === sample);
-        // console.log(results2)
-        // //get the top 3 results
-        // let top_results2 = results2.title.slice(0, 10).reverse();
-        // console.log(top_results2)
-        // // let length = top_results.length
-        // // console.log(length)
-        // let displayinfo = d3.select('#sample-metadata4');
-        // displayinfo.html('');
-        // Object.entries(top_results2).forEach(([key, value]) => {
-        //     displayinfo3.append("panel-body").text(`${value}`);
+            // let results2 = data.filter(varty => varty.variety === sample);
+            // console.log(results2)
+            // //get the top 3 results
+            // let top_results2 = results2.title.slice(0, 10).reverse();
+            // console.log(top_results2)
+            // // let length = top_results.length
+            // // console.log(length)
+            // let displayinfo = d3.select('#sample-metadata4');
+            // displayinfo.html('');
+            // Object.entries(top_results2).forEach(([key, value]) => {
+            //     displayinfo3.append("panel-body").text(`${value}`);
         });
     });
 }
@@ -107,9 +107,9 @@ function init() {
 
         // Drop down menu creation
         let dropdownMenu = d3.select("#selDataset");
-        uniqueVarietyList.forEach((uniqueVarietyList) => {
-            dropdownMenu.append('option').text(uniqueVarietyList);
-        });
+        // uniqueVarietyList.forEach((uniqueVarietyList) => {
+        //     dropdownMenu.append('option').text(uniqueVarietyList);
+        // });
 
         // Start at wine option 0
         var result = uniqueVarietyList[0];

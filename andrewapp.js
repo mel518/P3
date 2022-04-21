@@ -48,38 +48,38 @@ function buildMetadata(sample) {
 
 
 function init() {
-  d3.json("http://127.0.0.1:5000").then(data => {
+  d3.json("http://127.0.0.1:5000/variety-list").then(data => {
       console.log("read samples");
-      var data = JSON.parse(data)
-      console.log(data)
+      console.log("data",data)
 
-        // Create a list for wine variety options
-        var varietyList = [];
+    //     // Create a list for wine variety options
+    //     var varietyList = [];
 
-        // Loop through data[0] to data.length
-        // Pull all wine variety options
-        for(var i = 0; i<data.length; i++) {
-            data[i].variety
-            varietyList.push(data[i].variety)
-    }
-        console.log(varietyList);
+    //     // Loop through data[0] to data.length
+    //     // Pull all wine variety options
+    //     for(var i = 0; i<data.length; i++) {
+    //         data[i].variety
+    //         varietyList.push(data[i].variety)
+    // }
+    //     console.log(varietyList);
 
-        // Remove Duplicates
-        uniqueVarietyList = Array.from(new Set(varietyList));
-        // Sort: Alphabetical Order
-        uniqueVarietyList.sort();
-        //Print Results
-        console.log(uniqueVarietyList);
+    //     // Remove Duplicates
+    //     uniqueVarietyList = Array.from(new Set(varietyList));
+    //     // Sort: Alphabetical Order
+    //     uniqueVarietyList.sort();
+    //     //Print Results
+    //     console.log(uniqueVarietyList);
 
 
         // Drop down menu creation
         let dropdownMenu = d3.select("#selDataset");
-        uniqueVarietyList.forEach((uniqueVarietyList) => {
-            dropdownMenu.append('option').text(uniqueVarietyList);
+        data.forEach((uniqueVarietyList) => {
+            dropdownMenu.append('option').text(uniqueVarietyList)
+            // dropdownMenu.append('option').text(uniqueVarietyList).property("value",UniqueVarietyList);
         })
-
+        //this is works because of Closure and Scope (Unique)
         // Start at wine option 0
-        var result = uniqueVarietyList[0];
+        var result = data[0];
 
         // // for (let i = 0; i<data.length; i++){
         // // console.log(data.country);

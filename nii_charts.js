@@ -31,9 +31,9 @@ function init() {
 
   // Drop down menu creation
   let dropdownMenu = d3.select("#selDataset");
-  uniqueVarietyList.forEach((uniqueVarietyList) => {
-      dropdownMenu.append('option').text(uniqueVarietyList);
-  })
+  // uniqueVarietyList.forEach((uniqueVarietyList) => {
+  //     dropdownMenu.append('option').text(uniqueVarietyList);
+  // })
 
   // Start at wine option 0
   var result = uniqueVarietyList[0];
@@ -111,9 +111,14 @@ function scatterpoints(sample){
       var data = [
         {
           x: winepoints,
+          y: wineprice.length,
           type: 'histogram',
         marker: {
           color: '#C70039',
+          line: {
+            color:  "rgba(255, 100, 102, 1)",
+            width: 1
+          }
         },
         }
       ];
