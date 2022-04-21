@@ -84,12 +84,13 @@ function scatterpoints(sample){
         x: (winepoints),
         y: (wineprice),
         //text: (otu_labelss),
+        text: [winename],
         mode: 'markers',
         marker: {
         color: (winepoints),
-        // size: (5),
-        colorscale: 'Fire',
-        text: [winename]
+        size: (15),
+        colorscale: 'Fire'
+        
       }
     };
     

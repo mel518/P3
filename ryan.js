@@ -55,12 +55,14 @@ function second_chart(sample) {
             top_ten.push(title[i].title);
         }
         console.log(top_ten);
-
+        number = [1,2,3,4,5,6,7,8,9,10]
         let top_ten2 = top_ten.slice(0, 10).reverse();
         let displayinfo3 = d3.select('#sample-metadata4');
         displayinfo3.html('')
+        console.log(top_ten2)
         Object.entries(top_ten2).forEach(([key, value]) => {
-            displayinfo3.append("panel-body").text(`${value}`).append('br');
+            displayinfo3.append("panel-body").text(number[key] + `. `+ `${value}`).append('br');
+            
             // let results2 = data.filter(varty => varty.variety === sample);
             // console.log(results2)
             // //get the top 3 results
@@ -73,6 +75,7 @@ function second_chart(sample) {
             // Object.entries(top_results2).forEach(([key, value]) => {
             //     displayinfo3.append("panel-body").text(`${value}`);
         });
+        console.log(top_ten2)
     });
 }
 

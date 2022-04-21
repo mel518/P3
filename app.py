@@ -56,13 +56,6 @@ def select(variety):
 #templates or d3.json to call server
 
 
-@app.route("/coords")
-def coords():
-    data = mongo.db.merged.find()
-    list_cur = list(data)
-    json_data = jsonify(json_util.dumps(list_cur))
-    return json_data
-
 
 if __name__ == '__main__':
     app.run(debug=True)
