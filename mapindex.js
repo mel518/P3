@@ -39,7 +39,7 @@ d3.json("http://127.0.0.1:5000/coords").then(async data => {
         avgPrice.push(`${value}`);
     }
     var myIcon = L.icon({
-        iconUrl: '/64x64.png',
+        iconUrl: '64x64.png',
         iconSize: [20, 20],
        // iconAnchor: [22, 94],
         //popupAnchor: [-3, -76],
