@@ -9,7 +9,7 @@ from flask_cors import CORS
 import sys
 
 # Create an instance of Flask
-app = Flask('https://egwhitewineapp.herokuapp.com/')
+app = Flask(__name__)
 CORS(app)
 
 # Use PyMongo to establish Mongo connection
