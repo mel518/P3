@@ -1,7 +1,7 @@
 certifi==2020.6.20
 click==8.0.4
 cycler==0.11.0
-dataclasses==0.8
+dataclasses==0.6
 Flask==2.0.3
 Flask-Cors==3.0.10
 Flask-PyMongo==2.3.0
