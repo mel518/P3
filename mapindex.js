@@ -1,5 +1,5 @@
 
-d3.json("https://egwhitewineapp.herokuapp.com").then(async data => {
+d3.json("https://egwhitewineapp.herokuapp.com/coords").then(async data => {
     console.log("read samples");
     var coorddata = JSON.parse(data)
     console.log(coorddata);
@@ -45,7 +45,7 @@ d3.json("https://egwhitewineapp.herokuapp.com").then(async data => {
         //popupAnchor: [-3, -76],
         
     });
-    for (var i = 0; i < 333; i++) {
+    for (var i = 0; i < lats.length; i++) {
         var marker = L.marker([lats[i], lngs[i]], {icon: myIcon}).bindPopup("<h4>Winery: " + winery[i] + 
         "</h4><hr><p>Average Price per Bottle: $" + avgPrice[i] + 
         "</p><hr><p>Average Points Rating: " + avgPoints[i]).openPopup();
