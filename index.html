@@ -2,89 +2,317 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wine a Little, Laugh a Lot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
 </head>
+
+
+<header>
+  <style>
+    /* Carousel styling */
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100vh;
+    }
+
+    .carousel-item:nth-child(1) {
+      background-image: url('https://hdwallsource.com/img/2016/8/vineyard-wallpaper-background-51268-52964-hd-wallpapers.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .carousel-item:nth-child(2) {
+      background-image: url('https://jaksonhospitality.com/blog/wp-content/uploads/2017/09/vineyard-grapes-home-slideshow.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .carousel-item:nth-child(3) {
+      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #introCarousel {
+        margin-top: -58.59px;
+      }
+
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 50vh;
+      }
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+  </style>
+
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+  
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.6);">
+          <h1>Wine a Little, Laugh a Lot</h1>
+          <!-- <p>We had such a great time in LA!</p> -->
+          <a class="btn btn-outline-light btn-lg m-2" href="mapindex.html"
+          role="button" rel="nofollow" target="_blank">MAPS</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.6);">
+        <h1>There's Always Time for a Glass of Wine</h1>
+        <!-- <p>Thank you, Chicago!</p> -->
+        <a class="btn btn-outline-light btn-lg m-2" href="mapindex.html"
+        role="button" rel="nofollow" target="_blank">MAPS</a>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.6);">
+        <h1>But First, Wine!</h1>
+        <!-- <p>We love the Big Apple!</p> -->
+        <a class="btn btn-outline-light btn-lg m-2" href="mapindex.html"
+        role="button" rel="nofollow" target="_blank">MAPS</a>
+      </div>  
+    </div>
+  </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>  
+</header>
+
+
+
+<!--Main layout-->
+<main class="mt-5">
+  <div class="container">
+    <!--Section: Content-->
+    <section>
+      <div class="row">
+        <div class="col-md-6 gx-5 mb-4">
+          <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+            <img src="https://envato-shoebox-0.imgix.net/e0fe/fbc7-16d5-4a95-a1f0-8955c5c23a3f/Wine001-5535.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=368091e2e1ddd64938e13debe198bd9c" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 gx-5 mb-4">
+          <h4><strong>Choose Your Poison</strong></h4>
+          <p class="text-muted">
+            Grab a glass... or two and scroll!
+            <br />
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </p>
+          <br />
+          <p><strong><h5>This wine can be found here:</h5></strong></p>
+          <p class="text-muted">
+          <div id="sample-metadata" class="panel-body"></div>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Section: Content-->
+
+    <hr class="my-5" />
+
+    <!--Section: Content-->
+    <section class="text-center">
+      <h4 class="mb-5"><strong>Great Choice,<br/><h5>Now some fun wine facts!</h5></strong></h4>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Top 10 Wines</h5>
+              <p class="card-text">
+              <div id="sample-metadata4" class="panel-body"></div>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="https://envato-shoebox-0.imgix.net/108b/3ace-31b8-46b5-96b1-2652e85b9f6c/Wine001-5638.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=fd760a24d0147ecf45258a4b24a4923e" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">#1 Wine: Details</h5>
+              <p class="card-text">
+              <div id="sample-metadata2" class="panel-body"></div>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="https://images.creativemarket.com/0.1.0/ps/2810592/1360/907/m1/fpnw/wm1/ixvowhloyhcgiwm1wthk5aeipbwvnf0d34hph2ykvzswfdiopc3vr2nzwxtok8ys-.jpg?1496772611&s=98c8a1beafe05214de1cd7fe7a0febad" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">2nd Best Wine: Details</h5>
+              <p class="card-text">
+              <div id="sample-metadata3" class="panel-body"></div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section: Content-->
+
+    <hr class="my-5" />
+
+    <section>
+      <div class="col-md-12">
+        <h4><strong><center>Rating Distribution and Price Overview for Selected Wine</center></strong></h4>
+        <br/><br/>
+        <div id="bar"></div>
+      </div>
+      
+      <br/> <br/><br/>
+      
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </section>
+  </div>
+  <hr class="my-5" />
+
+
+  <!--Section: Content-->
+  <section class="mb-5">
+    <h4 class="mb-5 text-center"><strong>Learn Something, Share Something<br/>We'd Love To Know Your Favorite Wine!</strong></h4>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example1" class="form-control" />
+                <label class="form-label" for="form3Example1">Wine #1</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example2" class="form-control" />
+                <label class="form-label" for="form3Example2">Wine #2</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control" />
+            <label class="form-label" for="form3Example3">Wine #3?!</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input type="password" id="form3Example4" class="form-control" />
+            <label class="form-label" for="form3Example4">Might as well list them all at this point...</label>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4">
+            Submit!
+          </button>
+
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>-- Please Drink Responsibly --</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!--Section: Content-->
+  </div>
+</main>
+<!--Main layout-->
+
+<!--Footer-->
+<footer class="bg-light text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark">MDBootstrap.com  |  Google Images  |  Kaggle.com
+    </a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!--Footer-->
+
 
 <body>
 
-  <div class="container">
-    <div class="row"> 
-      <div class="test col-md-12 jumbotron text-center">
-        <h1>Wine a Little, </h1>
-        <h1><i>Laugh a Lot</i></h1>
-        <p>Use the dropdown below to explore different wine!</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <a href="mapindex.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click for Map of US Wineries!</a>
-        <div class="well2 text-center">
-          <h2>Choose Your Poison!</h2>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="col-md-4">
-          <div class="well">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Wine Variety by Country</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
-              <div class="panel-heading">
-                <h3 class="panel-title">Top 10 Wines</h3>
-              </div>
-              <div id="sample-metadata4" class="panel-body"></div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-md-4">
-          <div class="well">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Top 10 Wines</h3>
-              </div>
-              <div id="sample-metadata4" class="panel-body"></div>
-            </div>
-          </div>
-        </div> -->
-        <div class="col-md-4">
-          <div class="well">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Top Wine</h3>
-              </div>
-              <div id="sample-metadata2" class="panel-body"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">2nd Best Wine</h3>
-              </div>
-              <div id="sample-metadata3" class="panel-body"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <div id="bar"></div>
-        </div>
-        <div class="col-md-12">
-          <div id="gauge"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="bubble"></div>
-        </div>
-      </div>
-    </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -94,12 +322,16 @@
     <script src="ryan.js"></script>
     <script src="nii_charts.js"></script>
 
-    <!-- <script src="nii_charts.js"></script> -->
-    <!-- <script src="logic1.js"></script> -->
+      <!-- <script src="nii_charts.js"></script> -->
+      <!-- <script src="logic1.js"></script> -->
 
 
-    <!-- <script src="./static/js/bonus.js"></script> -->
+      <!-- <script src="./static/js/bonus.js"></script> -->
 
 </body>
 
 </html>
+
+<!-- SOURCES -->
+<!-- TITLE PICTURE -->
+<!-- https://hdwallsource.com/img/2016/8/vineyard-wallpaper-background-51268-52964-hd-wallpapers.jpg -->
