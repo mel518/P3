@@ -1,5 +1,5 @@
 
-d3.json("https://egwhitewineapp.herokuapp.com/").then(async data => {
+d3.json("https://egwhitewineapp.herokuapp.com").then(async data => {
     console.log("read samples");
     var coorddata = JSON.parse(data)
     console.log(coorddata);

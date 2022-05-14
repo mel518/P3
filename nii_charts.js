@@ -42,7 +42,7 @@ function init() {
 }
 
 function scatterpoints(sample){
-  d3.json("http://127.0.0.1:5000").then(data => {
+  d3.json("https://egwhitewineapp.herokuapp.com").then(data => {
         console.log('top data');
         var data = JSON.parse(data)
         console.log(data)

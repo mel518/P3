@@ -2,7 +2,7 @@
 function buildMetadata(sample) {
     
     // Pull samples.json then call it (data)
-    d3.json("http://127.0.0.1:5000").then(data => {
+    d3.json("https://egwhitewineapp.herokuapp.com").then(data => {
       console.log("read samples");
       var data = JSON.parse(data)
       
@@ -48,7 +48,7 @@ function buildMetadata(sample) {
 
 
 function init() {
-  d3.json("http://127.0.0.1:5000/variety-list").then(data => {
+  d3.json("https://egwhitewineapp.herokuapp.com/variety-list").then(data => {
       console.log("read samples");
       console.log("data",data)
 
